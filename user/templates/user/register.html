@@ -1,0 +1,72 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+
+
+
+{% block title %}
+    Register
+{% endblock title %}
+
+
+
+{% block content %}
+
+<div class="container login__page">
+    {% include 'mininav.html' %}
+
+    <div class="row d-flex align-items-center justify-content-center">
+        
+        <div class="col-md-8">
+            
+            {% if messages %}
+                {% for message in messages %}
+                    <div class="alert alert-danger">
+                        <p>{{ message }}</p>
+                    </div>
+                {% endfor %}
+            {% endif %}
+                
+            <div class="card login__card">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-4">
+                           <div class="login__logo">
+                               <img class="login__img" src="{% static 'images/logo.png' %}" alt="logo">
+                           </div> 
+
+                           <div >
+                               <h4 class="login__header">Register for a New Account</h4>
+                           </div>
+    
+                        </div>
+                        
+                            <div class="col-md-8 ">
+                                <form method="POST">
+                                    {% csrf_token %}
+                                {{ form|crispy }}
+                                <div>
+                                <small><a href="#">Forgot Password?</a></small>
+                                    
+                                </div>
+                                <div class="mt-4">
+                                    <button class="btn btn-submit">Sign Up</button>
+                                </div>
+                                <div class="mt-4 mb-5">
+                                    <small class="text-muted">Already Have an account?<a href="{% url 'user_login' %}" class="ml-2">Login</a></small>
+                                </div>
+                            </form>
+                            </div>
+                          
+                        
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+   
+</div>
+{% endblock content %}
+    
+    

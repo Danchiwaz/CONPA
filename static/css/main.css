@@ -1,0 +1,536 @@
+@import url('https://fonts.googleapis.com/css2?family=Asap:wght@700&family=Montserrat:wght@300;800&family=Poppins&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    background-color: #f1f3f7;
+    
+    font-family: 'Asap', sans-serif;
+font-family: 'Montserrat', sans-serif;
+font-family: 'Poppins', sans-serif;
+
+}
+.hero{
+    background: url("../images/bg3.jpg");
+    background: cover;
+    height: 100vh;
+}
+.img-logo{
+    height: 78px;
+    width: 78px;
+    object-fit: cover;
+}
+
+.btn-addition{
+    border-radius: 40px 40px 40px 40px;
+    padding: 8px 20px 8px 20px;
+    color: black;
+    outline: none;
+    transition: 1s;
+}
+.btn-addition:hover{
+    color: whitesmoke;
+}
+.navitem{
+    padding-right: 40px;
+    font-size: 16px;
+    font-weight: bold;
+}
+.hero-section{
+    margin-top: 50px;
+    
+}
+.btn-outline-darkblue{
+    border: 1px solid #08022b; ;
+    border-radius: 60px;
+    transition: all 0.3s ease-in-out;
+    /* border-color:; */
+}
+.btn-outline-darkyellow{
+    border: 1px solid #de9e21; ;
+    border-radius: 60px;
+    transition: all 0.3s ease-in-out;
+    /* border-color:; */
+}
+.btn-outline-darkyellow:hover{
+    background-color: #d79410;
+    color: white;
+}
+.btn-outline-darkblue:hover{
+    background-color: #4b00a0;
+    color: white;
+}
+/* .text-mute{
+    color: 
+    #18212f;
+} */
+.bg-span{
+    /* background:url("../images/bush.png"); */
+    background-size: cover;
+    color:indigo;
+    font-weight: bold;
+}
+.hero-header{
+    color: #08022b;
+    font-size: 55px;
+    font-weight: bold;
+}
+.hero-title-desc{
+    color: black;
+    line-height: 2rem;
+    padding-top: 3rem;
+    
+}
+.hero-right{
+    /* position: relative; */
+    background: rgb(142,141,138);
+    background: linear-gradient(90deg, rgba(142,141,138,0.9920343137254902) #9d6355%, rgba(232,237,230,1) 100%);
+    
+    clip-path: polygon(100% 0%, 100% 47%, 100% 100%, 25% 100%, 0% 50%, 25% 0%);
+    
+    
+}
+.animated{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+.animated-1{
+    width: 20px;
+    height: 20px;
+    background-color: gold;
+    border-radius: 50%;
+    margin-top: 60px;
+}
+.animate-div1{
+    background-color: #de9e21;
+}
+.animate-div2{
+    background-color:#2d3852;
+}
+.animate-div3{
+    background-color:#6daa38;
+}
+
+
+
+.hero-image-content{
+    padding-top: -30px;
+    /* height: 400px; */
+}
+.heartbeat {
+	-webkit-animation: heartbeat 1.5s ease-in-out infinite both;
+	        animation: heartbeat 1.5s ease-in-out infinite both;
+}
+.btn-orange{
+    background-color: #f5c95b;
+}
+.btn-orange:hover{
+    background-color: #d79410;
+    color: white;
+}
+.btn-darkblue{
+    background-color: #08022b;
+}
+.btn-darkblue:hover{
+    background-color: #4b00a0;
+}
+
+/* about us section */
+.about{
+    margin-top: 5rem;
+    height: 100vh;
+
+}
+.about__header{
+    margin-top: 5rem;
+    margin-bottom: 3rem;
+    font-weight: 900;
+    font-size: 55px;
+    color: #08022b;
+}
+.about__us{
+    border-right: 5px solid #d79410;
+    /* margin-right: 2px; */
+}
+.about__detail{
+    color: #d79410;
+}
+.about__title{
+    font-weight: 200px;
+    color: #d79410;
+}
+.services__desc-footer{
+    background-color: #d79410;
+    margin-left: 0;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 15px;
+    margin-top: 5rem;
+    border-top-right-radius: 60px;
+    border-bottom-right-radius: 60px;
+    color: white;
+}
+.services__plans{
+    text-align: center;
+    font-weight: 00;
+    font-size: 20px;
+    color: #de9e21;
+    margin-top: 1rem;
+}
+/* end of about us section  */
+
+/* services section */
+.services{
+    margin-top: 5rem;
+    height: 100vh;
+}
+.services__left{
+    border-left: 5px solid #d79410;
+    height: fit-content;
+}
+
+.services__desc{
+    font-weight: 900;
+    color: #d79410;
+    font-size: 40px;
+    padding-right: 3rem;
+}
+.card__plans{
+    border: 2px solid #d79410;
+    
+}
+.card__header{
+    background-color: whitesmoke;
+    color: #d79410;
+    text-align: center;
+    border: none;
+    font-weight: bold;
+}
+.plans__price{
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+.plans__icon{
+    height: 30px;
+    width: 30px;
+    text-align: center;
+    background-color: #d79410;
+    margin: auto;
+    color: white;
+    border-radius: 50%;
+    vertical-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.card__footer{
+    border: none;
+    background-color: whitesmoke;
+}
+.btn-pricing{
+    width: 100%;
+    margin-top: 3rem;
+    background: #d79410;
+    padding: 15px 10px;
+    border-radius: 60px;
+    transition: all 0.3s ease-in-out;
+}
+.btn-pricing:hover{
+    background: #de9e21;
+    color: white;
+}
+
+/* team */
+.team__container{
+    background-color: white;
+
+}
+.card__teams{
+    /* border: 2px solid #d79410; */
+    background-color: white;
+    border: 1px solid whitesmoke;
+    box-shadow: -1px 10px 110px -41px rgba(0,0,0,0.85);
+    -webkit-box-shadow: -1px 10px 110px -41px rgba(0,0,0,0.85);
+    -moz-box-shadow: -1px 10px 110px -41px rgba(0,0,0,0.85);
+    margin-bottom: 2rem;
+
+}
+.card__body-pricing{
+    background-color: whitesmoke;
+}
+.text-darkblue{
+    color: #d79410;
+}
+.card__header1{
+    width: 200px;
+    height: 200px;
+    margin: auto;
+    background: none;
+}
+.team__image{
+    border-radius: 50%;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+/* end of team  */
+
+/* end of services section */
+
+
+/* login  */
+.back__home-container{
+    margin-top: 5rem;
+}
+.back-home{
+    background-color: #d79410;
+    padding: 20px 10px;
+    color: white;
+    text-decoration: none;
+    outline: none;
+    border-radius: 10px;
+
+}
+.textinput{
+    border: 1px solid #d79410;
+    background-color: white !important;
+    outline: 0px !important;
+    margin-bottom: 1rem;
+    
+}
+.requiredField{
+    padding-bottom: 1rem !important;
+}
+.btn-submit{
+    background-color: #d79410;
+    padding: 10px 25px;
+    color: white;
+    transition: all 0.3s ease-in-out;
+}
+.btn-submit:hover{
+    background-color: #de9e21;
+    color: whitesmoke;
+}
+.alert-danger{
+    background-color: #d79410;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    color: white;
+}
+.account__text{
+    margin-top: 1rem;
+}
+.login__page{
+    height: 100vh;
+}
+.login__card{
+    border: 2px solid #d79410;
+}
+.card__left{
+    background: #d79410;
+    /* width: 100%; */
+}
+.login__logo{
+    margin-top: 2rem;
+    width: 150px;
+    height: 150px;
+    background-color: whitesmoke;
+    border-radius: 50%;
+    margin-bottom: 3rem;
+   
+}
+.login__img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.login__header{
+    font-weight: bold;
+    font-size: 20px;
+}
+/* end of Login  */
+
+/* register  */
+.form-text{
+    color: #d79410 !important;
+    display: none !important;
+}
+.emailinput{
+    border: 1px solid #d79410;
+}
+/* end of register */
+
+
+@media screen and (max-width:768px) {
+    .hero-header{
+        font-weight: normal;
+        font-size: 40px;
+    }
+    .hero-right{
+        display: none;
+        
+    }
+    .bt-add {
+        margin-bottom: 10px;
+    }
+    .animated-1{
+        display: none;
+    }
+    .about-header{
+        margin-top: 300px;
+    }
+
+}
+@media screen and (max-width:400px) {
+    .about-header{
+        margin-top: 450px;
+    }
+    .login__logo{
+        display: none;
+    }
+
+}
+
+
+
+/* profile page  */
+.profile_page{
+ height: 80vh;
+ background-color: whitesmoke;
+}
+.profile_dashboard{
+    height: 100vh;
+    background-color: #d79410;
+}
+.nav-link1{
+  color: white !important;
+  font-weight: 500;
+  font-size: 16px;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  padding-left: 2rem !important;
+  margin-bottom: 1rem !important;
+  
+}
+.alert-orange{
+    background-color: #d79410;
+    color: #08022b;
+    font-weight: 400;
+}
+input{
+    color: #08022b;
+}
+.active{
+    background: whitesmoke !important;
+    color: #08022b !important;
+}
+.nav-link1:hover{
+    background: white !important;
+    color: #08022b !important;
+}
+.nav-item1:nth-child(1){
+    margin-top: 2rem;
+}
+.profile_icons{
+    color:#c46259;
+}
+.btn-warning1{
+    margin-top: 2rem;
+    background-color: #d79410;
+    color: #08022b;
+
+}
+.card-profile{
+    border: 2px solid #d79410 !important;
+    padding-top: 1rem !important;
+    padding-left: 1rem !important;
+}
+.btn-warning1:hover{
+    background-color: #de9e21;
+    color: #f1f3f7;
+    width: 100%;
+}
+
+/* end of profile Page  */
+
+
+
+
+
+@-webkit-keyframes heartbeat {
+    from {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+      -webkit-transform-origin: center center;
+              transform-origin: center center;
+      -webkit-animation-timing-function: ease-out;
+              animation-timing-function: ease-out;
+    }
+    10% {
+      -webkit-transform: scale(0.91);
+              transform: scale(0.91);
+      -webkit-animation-timing-function: ease-in;
+              animation-timing-function: ease-in;
+    }
+    17% {
+      -webkit-transform: scale(0.98);
+              transform: scale(0.98);
+      -webkit-animation-timing-function: ease-out;
+              animation-timing-function: ease-out;
+    }
+    33% {
+      -webkit-transform: scale(0.87);
+              transform: scale(0.87);
+      -webkit-animation-timing-function: ease-in;
+              animation-timing-function: ease-in;
+    }
+    45% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+      -webkit-animation-timing-function: ease-out;
+              animation-timing-function: ease-out;
+    }
+  }
+  @keyframes heartbeat {
+    from {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+      -webkit-transform-origin: center center;
+              transform-origin: center center;
+      -webkit-animation-timing-function: ease-out;
+              animation-timing-function: ease-out;
+    }
+    10% {
+      -webkit-transform: scale(0.91);
+              transform: scale(0.91);
+      -webkit-animation-timing-function: ease-in;
+              animation-timing-function: ease-in;
+    }
+    17% {
+      -webkit-transform: scale(0.98);
+              transform: scale(0.98);
+      -webkit-animation-timing-function: ease-out;
+              animation-timing-function: ease-out;
+    }
+    33% {
+      -webkit-transform: scale(0.87);
+              transform: scale(0.87);
+      -webkit-animation-timing-function: ease-in;
+              animation-timing-function: ease-in;
+    }
+    45% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+      -webkit-animation-timing-function: ease-out;
+              animation-timing-function: ease-out;
+    }
+  }

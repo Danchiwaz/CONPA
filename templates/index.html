@@ -1,0 +1,332 @@
+{% extends 'base.html' %} 
+{% load static %} 
+{% block title %} CONPA {% endblock title %}
+
+
+
+
+{% block content %}
+<div class="container-fluid hero">
+  <div class="container">
+   {% include 'navbar.html' %}
+  </div>
+
+  <div class="container hero-section">
+    <div class="row">
+      <div class="col-md-8 col-sm-12">
+        <h1 class="hero-header">Credible Option National Placement Agency</h1>
+        <p class="hero-title-desc">
+          We specialize in placement of university student and college students
+          and at work places for industrial hands-on experience which is a
+          course requirement.<span class="bg-span"
+            >Get Attached now in one of the best Companies</span
+          >
+        </p>
+        <div class="row pt-5">
+          
+          {% if request.user.is_authenticated %}
+          <div class="col-md-6">
+            <a class="btn text-black btn-orange w-100 pt-4 pb-4" href="{% url 'profile' %}"
+              >Go To Your Profile</a
+            >
+          </div>
+          {% else %}
+          <div class="col-md-6">
+            <a
+              class="btn text-light btn-darkblue w-100 bt-add pt-4 pb-4"
+              href="#"
+              >For Companies</a
+            >
+          </div>
+          <div class="col-md-6">
+            <a class="btn text-black btn-orange w-100 pt-4 pb-4" href="{% url 'register_user' %}"
+              >Register as a student</a
+            >
+          </div>
+            
+          {% endif %}
+            
+        </div>
+      </div>
+
+      <div class="col-md-4 hero-right">
+        <img
+          class="img-fluid hero-image-content"
+          src="{% static 'images/graduate.png' %}"
+          alt=""
+        />
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="about-us" class="container-fluid bg-light about">
+  <div
+    class="row text-center mt-5"
+    data-aos="fade-down"
+    data-aos-duration="3000"
+  >
+    <h1 class="about__header">WHO ARE WE</h1>
+  </div>
+  <div class="row">
+    <div class="col-md-5" data-aos="fade-right" data-aos-duration="3000">
+      <img src="{% static 'images/aboutus.png' %}" alt="" />
+    </div>
+    <div class="col-md-7 about__us">
+      <p data-aos="fade-left"  data-aos-duration="1500">
+        <span class="about__detail" data-aos="fade-left">CONPA</span> is a
+        company the specializes in placement of university and college students
+        and at work places for industrial hands-on experience which is a course
+        requirement.The company provides services of linking up the student to
+        the host organisation. <br />
+        We believe that education has the power to transform and empower the
+        society,with industrial internship bein a critical pillar of the
+        education structure,it is important that the young professionals be
+        matched to the right profession.
+      </p>
+      <div data-aos="fade-left"  data-aos-duration="2000">
+        <h4 class="about__title">Our Mission</h4>
+        <p>
+          To fill the void in linkage between young professionals and host
+          corporates through personalized communication and networking to ensure
+          that young professionals are matched to the right profession.
+        </p>
+      </div>
+      <div data-aos="fade-left"  data-aos-duration="2500">
+        <h4 class="about__title">Our Vision</h4>
+        <p>
+          Be a respectable and trusted agency in Kenya and the region at large..
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container services" id="services">
+  <div
+    class="row text-center mt-5"
+    data-aos="fade-down"
+    data-aos-duration="3000"
+  >
+    <h1 class="about__header">OUR SERVICES</h1>
+  </div>
+  <div class="row">
+    <div class="col-md-4 services__left">
+      <div class="row services__header">
+        <div class="col-md-12">
+          <h2 class="services__desc">Don't Hustle for an Attachement.</h2>
+        </div>
+        
+         <h3 data-aos="fade-right"
+         
+         data-aos-easing="ease-in-sine" class="services__desc-footer">Choose a Plan</h3>
+      </div>
+    </div>
+    <div class="col-md-8">
+      <div class="row">
+        <h2 class="services__plans">Our Plans</h2>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <div class="card card__plans" data-aos="fade-bottom"  data-aos-duration="1000">
+            <div class="card-header card__header">Attachment</div>
+            <div class="card-body card__body-pricing">
+              <h4 class="plans__price"><span>Ksh.</span> 1000</h4>
+              <div class="plans__icon"><ion-icon name="arrow-down-outline"></ion-icon></div>
+            </div>
+            <div class="card-footer card__footer">
+              <div class="card-footer card__footer">
+                <a class="btn  btn-pricing" href="#">Get attached</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="card card__plans" data-aos="fade-left"  data-aos-duration="1000">
+            <div class="card-header card__header">
+              Internship
+            </div>
+            <div class="card-body card__body-pricing">
+               <h4 class="plans__price"><span>Ksh.</span> 1500</h4>
+               <div class="plans__icon"><ion-icon name="arrow-down-outline"></ion-icon></div>
+            </div>
+            <div class="card-footer card__footer">
+              <a class="btn  btn-pricing" href="#">Get attached</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid team__container">
+  <div class="container">
+    <div class="row text-center mt-5" data-aos="fade-down" data-aos-duration="3000">
+      <h1 class="about__header">MEET OUR TEAM</h1>
+    </div>
+    <div class="row">
+      <div class="col-md-4">
+        <div class="card card__teams" data-aos="zoom-in-up">
+          <div class="card-header card__header1">
+            <img class="team__image" src="{% static 'images/peter.jpg' %}" alt="">
+          </div>
+          <div class="card-body text-center pt-5">
+            <h6>Chief Executive Officer(CEO)</h6>
+            <p class="text-darkblue">Peter</p><br>
+            <small class="text-muted">Board of Director</small>
+  
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-md-4">
+        <div class="card card__teams" data-aos="zoom-in-up">
+          <div class="card-header card__header1">
+            <img class="team__image" src="{% static 'images/carol.jpg' %}" alt="">
+          </div>
+          <div class="card-body text-center pt-5">
+            <h6>Chief Executive Officer(CEO)</h6>
+            <p class="text-darkblue">Carol Muthoni</p><br>
+            <small class="text-muted">Board of Director</small>
+  
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card card__teams" data-aos="zoom-in-up">
+          <div class="card-header card__header1">
+            <img class="team__image" src="{% static 'images/ted.jpg' %}" alt="">
+          </div>
+          <div class="card-body text-center pt-5">
+            <h6>Chief Executive Officer(CEO)</h6>
+            <p class="text-darkblue">Tedd Muchai</p><br>
+            <small class="text-muted">Board of Director</small>
+
+  
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card card__teams" data-aos="zoom-in-up">
+          <div class="card-header card__header1">
+            <img class="team__image" src="{% static 'images/zippie.jpg' %}" alt="">
+          </div>
+          <div class="card-body text-center pt-5">
+            <h6>Chief Executive Officer(CEO)</h6>
+            <p class="text-darkblue">Zipporah</p><br>
+            <small class="text-muted">Board of Director</small>
+  
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4" data-aos="zoom-in-up">
+        <div class="card card__teams">
+          <div class="card-header card__header1">
+            <img class="team__image" src="{% static 'images/daniel.jpg' %}" alt="">
+          </div>
+          <div class="card-body text-center pt-5">
+            <h6>Chief Technology Officer(CTO)</h6>
+            <p class="text-darkblue">Daniel Wachira Maina</p><br>
+            <small class="text-muted">Board of Director</small>
+  
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+ 
+</div>
+
+{% endblock content %}
+
+<!-- <div class="container-fluid about-us" id="about-us">
+  <div class="container">
+    <div class="row text-center">
+      <h3 class="about-header mb-5">Who are we?</h3>
+    </div>
+    <div class="row">
+      <div class="col-md-4">
+        <h4 class="about-header-about mb-3">About us</h4>
+        <p class="text-muted about-header-text">
+          CONPA is a company the specializes in placement of university and
+          college students and at work places for industrial hands-on experience
+          which is a course requirement.The company provides services of linking
+          up the student to the host organisation. <br />
+          We believe that education has the power to transform and empower the
+          society,with industrial internship bein a critical pillar of the
+          education structure,it is important that the young professionals be
+          matched to the right profession.
+        </p>
+      </div>
+      <div class="col-md-2 arrow mr-4"></div>
+      <div class="col-md-3">
+        <div
+          class="d-flex flex-column justify-content-center align-items-center"
+        >
+          <div>
+            <img
+              src="{% static 'images/mission.jpg' %}"
+              class="mission-icon"
+              alt="img"
+            />
+          </div>
+          <div><h6 class="text-mission">Mission</h6></div>
+          <div>
+            <p class="text-muted about-header-text">
+              
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div
+          class="d-flex flex-column justify-content-center align-items-center"
+        >
+          <div>
+            <img
+              src="{% static 'images/vision.jpg' %}"
+              class="mission-icon"
+              alt="img"
+            />
+          </div>
+          <div><h6 class="text-mission">Vision</h6></div>
+          <div>
+            <p class="text-muted about-header-text">
+             
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> -->
+
+<!-- <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <img src="{% static 'images/about.jpg' %}" class="img-fluid-size" alt="">
+        <div class="row pt-5">
+          <div class="col-md-6 about-header-mission ">
+            <h5 class="about-header">Mission</h5>
+            <p class="about-header-text">To fill the void in linkage between young professionals
+              and host corporates through personalized communication and networking to ensure 
+              that young professionals are matched to the right profession.
+            </p>
+          </div>
+          <div class="col-md-6">
+            <h5 class="about-header">Vision</h5>
+            <p class="about-header-text">
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col col-sm-12">
+        <h4 class="about-header about-bg">ABOUT US</h4>
+        
+      </div>
+    </div>
+   </div>
+  
+ </div> -->
