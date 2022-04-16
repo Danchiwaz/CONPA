@@ -15,7 +15,7 @@ class ProfileForm(forms.ModelForm):
     class Meta:
         model  = Profile
         fields = "__all__"
-        exclude = ['user']
+        exclude = ['user', 'attached','disqualify','Qualified']
         # widgets = {
         #     'file': ClearableFileInput(attrs={'multiple': True}),
         # }

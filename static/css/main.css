@@ -442,11 +442,14 @@ input{
 }
 .profile_icons{
     color:#c46259;
+    font-size: 25px;
+    margin-right: 1rem;
 }
 .btn-warning1{
     margin-top: 2rem;
     background-color: #d79410;
     color: #08022b;
+    width: 100%;
 
 }
 .card-profile{
@@ -457,9 +460,25 @@ input{
 .btn-warning1:hover{
     background-color: #de9e21;
     color: #f1f3f7;
-    width: 100%;
+    
 }
 
+.select{
+    border: 1px solid #d79410 !important;
+}
+.form-control-file{
+    color: #d79410 !important;
+}
+.personal_info{
+    border-right: 1px solid #d79410;
+}
+.attachment{
+    margin-top: 2rem;
+}
+.personal_headers{
+    color: #d79410;
+    margin-bottom: 1rem;
+}
 /* end of profile Page  */
 
 

@@ -24,19 +24,19 @@
   <div class="container-fluid profile_page">
       <div class="row">
         <div class="col-md-3 profile_dashboard">
-            <h4>Welcome Back, {{request.user.username }}</h4>
+            <h4 class="text-center text-light mt-3 pb-3 border-bottom">Dashboard</h4>
             <ul class="nav nav-pills flex-column" role="tablist">
               <li class="nav-item nav-item1">
                 <a class="nav-link nav-link1 active" data-bs-toggle="pill" href="#personal"><i class="bi bi-person-circle mr-3 profile_icons"></i>Personal Information</a>
               </li>
               <li class="nav-item nav-item1">
-                <a class="nav-link nav-link1" data-bs-toggle="pill" href="#home"><i class="bi bi-person-circle mr-3 profile_icons"></i>Update Profile</a>
+                <a class="nav-link nav-link1" data-bs-toggle="pill" href="#home"><i class="bi bi-pencil-fill mr-3 profile_icons"></i>Update Profile</a>
               </li>
               <li class="nav-item nav-item1">
-                <a class="nav-link nav-link1" data-bs-toggle="pill" href="#menu1">Application Status</a>
+                <a class="nav-link nav-link1" data-bs-toggle="pill" href="#menu1"><i class="bi bi-archive-fill mr-3 profile_icons"></i>Application Status</a>
               </li>
               <li class="nav-item nav-item1">
-                <a class="nav-link nav-link1" data-bs-toggle="pill" href="#menu2">Payment</a>
+                <a class="nav-link nav-link1" data-bs-toggle="pill" href="#menu2"><i class="bi bi-cash-coin mr-3 profile_icons"></i>Payment</a>
               </li>
             </ul>
           </div>
@@ -44,29 +44,71 @@
             <!-- Tab panes -->
             <div class="tab-content">
                 <div id="personal" class="container tab-pane active">
-                   <h3>Personal Information</h3>
-                   <div class="row">
-                       <div class="col-md-6">
-                           <div class="card card-profile">
-                               <h5 class="mb-3"><strong>Username:</strong> {{ request.user.username }}</h5>
-                               
-                            
-                               <h5 class="mb-3"><strong>First Name:</strong>{{ profile.firstName }} 
-                                <h5 class="mb-3"><strong>Last Name:</strong> {{ profile.lastName }}</h5>
-                               
-                           
-                                 
-                               
-                              
-                             
-                                   
-                              
-                               
-                               <h5 class="mb-3"><strong>Email:</strong> {{ request.user.email }}</h5>
-                           </div>
-                       </div>
-                   </div>
+
+                  <div class="row">
+                    <div class="col-md-6 personal_info">
+                      <h5 class="personal_headers">Personal Information</h5>
+                      <div class="row">
+                        <div class="col-md-6">
+                          <p><i class="bi bi-person-fill profile_icons"></i>{{ profile.firstName }} {{ profile.lastName }}</p>
+                        </div>
+                        <div class="col-md-6">
+                          <p><i class="bi bi-telephone-fill profile_icons"></i>{{ profile.primary_contact }} </p>
+                        </div>
+                        <div class="col-md-6">
+                          <p><i class="bi bi-compass profile_icons"></i>{{ profile.current_location }} </p>
+                        </div>
+                        <div class="col-md-6">
+                          <p><i class="bi bi-envelope-check profile_icons"></i>{{ request.user.email }} </p>
+                        </div>
+                      </div>
+                      
+
+                    </div>
+                    <div class="col-md-6">
+                      <h5 class="personal_headers">Education Infomation</h5>
+                      <div class="row">
+                        <div class="col-md-6">
+                          <p><i class="bi bi-bank2 profile_icons"></i>{{ profile.universityName }} </p>
+                        </div>
+                        <div class="col-md-6">
+                          <p><i class="bi bi-book-half profile_icons"></i>{{ profile.course_name }} </p>
+                        </div>
+                        <div class="col-md-6">
+                          <p><i class="bi bi-bar-chart-fill profile_icons"></i>{{ profile.level_of_Education }} </p>
+                        </div>
+                        <div class="col-md-6">
+                          <p><i class="bi bi-activity profile_icons"></i>{{ profile.current_year_of_study }} </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row attachment">
+                        <h5 class="personal_headers">Attachment Detals.</h5>
+                        <div class="col-md-6">
+                          <small class="text-muted">Preffered Company</small>
+                          <p><i class="bi bi-bank2 profile_icons"></i>{{ profile.preferred_company }} </p>
+                        </div>
+                        <div class="col-md-6">
+                          <small class="text-muted">Attachment Starting Date</small>
+                          <p><i class="bi bi-calendar profile_icons"></i>{{ profile.expected_starting_date }} </p>
+                        </div>
+                    </div>
+
+                    <div class="row attachment">
+                        <h5 class="personal_headers">Uploaded Documents.</h5>
+                        <div class="col-md-6">
+                          <small class="text-muted">School Introduction Letter</small> <br>
+                          <i class="bi bi-file-earmark profile_icons"></i>{{ profile.School_introduction_Letter }} 
+                        </div>
+                        <div class="col-md-6">
+                          <small class="text-muted">Insuarance Cover</small> <br>
+                          <i class="bi bi-file-earmark-fill profile_icons"></i>{{ profile.insuarance_cover }} 
+                        </div>
+                    </div>
+                  
                   </div>
+
+                </div>
               <div id="home" class="container tab-pane fade">
                 
                     
@@ -92,11 +134,39 @@
                         </div>
                         <div class="col-md-6">
                            
+                            {{ form.current_year_of_study |as_crispy_field }}
+                        </div>
+                        <div class="col-md-6">
+                           
                             {{ form.course_name |as_crispy_field }}
                         </div>
                         <div class="col-md-6">
                            
-                            {{ form.introduction_Letter_and_cover_letter |as_crispy_field }}
+                            {{ form.preferred_company |as_crispy_field }}
+                        </div>
+                        <div class="col-md-6">
+                           
+                            {{ form.current_location |as_crispy_field }}
+                        </div>
+                        <div class="col-md-6">
+                           
+                            {{ form.primary_contact |as_crispy_field }}
+                        </div>
+                        <div class="col-md-6">
+                           
+                            {{ form.alternative_contact |as_crispy_field }}
+                        </div>
+                        <div class="col-md-6">
+                           
+                            {{ form.expected_starting_date |as_crispy_field }}
+                        </div>
+                        <div class="col-md-6">
+                           
+                            {{ form.School_introduction_Letter |as_crispy_field }}
+                        </div>
+                        <div class="col-md-6">
+                           
+                            {{ form.insuarance_cover |as_crispy_field }}
                         </div>
                     </div>
 
@@ -105,11 +175,21 @@
               </div>
               <div id="menu1" class="container tab-pane fade">
                
-                <h3>Menu 1</h3>
-                <p>
-                  Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                  nisi ut aliquip ex ea commodo consequat.
-                </p>
+                <h3>Application status</h3>
+                <div class="card card-profile">
+                  
+                  {% if profile.attached %}
+                    <p>Congratulations ,{{user.username}}.You have been attached to {{ profile.preferred_company }} .</p>
+                    <p>As CONPA,We wish you all the Best.</p>
+
+                  {% elif profile.disqualify %}
+                   <p>Hello,{{user.username}}.First ,Thank you for expressing you intrest to be attached by CONPA.Unfortunately we wish not to continue with your application since you didn't meet our minimum requirements.Kindly next time upload all the documents required and provide accurate information.</p>
+                   <p>Thank you.</p>
+                   <p>Regards</p>
+                   <p class="text-muted"><small>CONPA</small></p>
+                  {% endif %}
+                    
+                </div>
               </div>
               <div id="menu2" class="container tab-pane fade">
                

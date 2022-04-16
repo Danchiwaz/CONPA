@@ -27,11 +27,15 @@ class="navbar navbar-expand-lg navbar-light navbar-sticky bg-transparent"
       </li>
       
     </ul>
-    <form class="d-flex">
+    
+    {% if user.is_authenticated %}
+    <p class="text-dark mt-3 mr-3 ">Welcome Back, {{ user.username}}</p>
+    <form class="d-flex ml-2">
       <!-- <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"> -->
+      
       <a
         href="{% url 'user_logout' %}"
-        class="btn me-2 btn-outline-darkyellow btn-addition"
+        class="btn me-2  btn-outline-darkyellow btn-addition"
         
       >
         logout
@@ -39,6 +43,9 @@ class="navbar navbar-expand-lg navbar-light navbar-sticky bg-transparent"
       
       
     </form>
+    {% endif %}
+      
+   
   </div>
 </div>
 </nav>
